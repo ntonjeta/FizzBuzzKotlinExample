@@ -4,32 +4,32 @@ import org.junit.jupiter.api.Test
 internal class FizzBuzzTests {
 
     @Test
-    fun multipleOfThreeShouldBeFizz(){
+    fun multipleOfThreeShouldBeFizz() {
         val fizzBuzz = FizzBuzz()
 
-        assertEquals(fizzBuzz.get(3), "Fizz")
-        assertEquals(fizzBuzz.get(9), "Fizz")
+        assertEquals("Fizz", fizzBuzz.get(3))
+        assertEquals("Fizz", fizzBuzz.get(9))
     }
 
     @Test
-    fun multipleOfFiveShouldBeBuzz(){
+    fun multipleOfFiveShouldBeBuzz() {
         val fizzBuzz = FizzBuzz()
 
-        assertEquals(fizzBuzz.get(5), "Buzz")
-        assertEquals(fizzBuzz.get(10), "Buzz")
+        assertEquals("Buzz", fizzBuzz.get(5))
+        assertEquals("Buzz", fizzBuzz.get(10))
     }
 
     @Test
-    fun multipleOfBothShouldBeFizzBuzz(){
+    fun multipleOfBothShouldBeFizzBuzz() {
         val fizzBuzz = FizzBuzz()
 
-        assertEquals("FizzBuzz",fizzBuzz.get(15))
+        assertEquals("FizzBuzz", fizzBuzz.get(15))
     }
 
     @Test
-    fun noMultipleOfBothShouldBeNumber(){
+    fun noMultipleOfBothShouldBeNumber() {
         val fizzBuzz = FizzBuzz()
 
-        assertEquals(fizzBuzz.get(4), "4")
+        assertEquals("4", fizzBuzz.get(4))
     }
 }

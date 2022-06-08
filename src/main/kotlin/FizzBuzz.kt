@@ -1,10 +1,13 @@
 import java.util.function.IntPredicate
 
 class FizzBuzz {
-    private val fizz = Rule({ it % 3 == 0 }, "Fizz")
-    private val buzz = Rule({ it % 5 == 0 }, "Buzz")
+    private val ruleEngine : RuleEngine
+    init {
+         val fizz = Rule({ it % 3 == 0 }, "Fizz")
+         val buzz = Rule({ it % 5 == 0 }, "Buzz")
+         ruleEngine = RuleEngine(listOf(fizz, buzz))
+    }
 
-    private val ruleEngine = RuleEngine(listOf(fizz, buzz))
     fun get(number: Int): String {
         return ruleEngine.apply(number);
     }

@@ -13,9 +13,9 @@ class FizzBuzz {
 class RuleEngine(private val rules: List<Rule>) {
     fun apply(number: Int): String {
         var result = rules
-            .map { rule: Rule -> rule.apply(FizzNumber(number.toString())) }
+            .map { rule -> rule.apply(FizzNumber(number.toString())) }
             .filterNotNull()
-            .map { fizzNumber: FizzNumber -> fizzNumber.toString() }
+            .map { fizzNumber -> fizzNumber.toString() }
         return if (result.isEmpty()) number.toString() else result.joinToString("")
     }
 }
